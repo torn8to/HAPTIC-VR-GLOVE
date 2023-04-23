@@ -7,6 +7,8 @@
 
 
 
+int gauge_reading[5];
+float servo_force[5];
 
 #if ENABLE_MEDIAN_FILTER
   RunningMedian rmSamples[10] = {
@@ -551,20 +553,19 @@ int sinCosMix(int sinPin, int cosPin, int i){
  
 
 #if USING_CURRENT_SENSOR
-float* getCurrentSensorsRaw()
-{
-  float[5] servo_force;
+float* getCurrentSensorsRaw(){
+  float current_readings[5];
   readMux(PIN_CURRENT_SENSOR_THUMB);
-  servo_force[0] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  servo_force[0] = servo_processing(current_processing(analogRead(MUX_INPUT)));
   readMux(PIN_CURRENT_SENSOR_INDEX);
-  servo_force[1] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  servo_force[1] = servo_processing(current_processing(analogRead(MUX_INPUT)));
+  readMux(PIN_CURRENT_SENSOR_MIDDLE);
+  servo_force[2] = servo_processing(current_processing(analogRead(MUX_INPUT)));
   readMux(PIN_CURRENT_SENSOR_RING);
-  servo_force[2] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
-  readMux(PIN_CURRENT_SENSOR_INDEX);
-  servo_force[3] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  servo_force[3] = servo_processing(current_processing(analogRead(MUX_INPUT)));
   readMux(PIN_CURRENT_SENSOR_PINKY);
-  servo_force[4] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
-  return current_ADC;
+  servo_force[4] = servo_processing(current_processing(analogRead(MUX_INPUT)));
+  return current_readings;
 }
 
 float current_processing(int adc_value){
@@ -576,22 +577,22 @@ float servo_processing(float servo_amperage)
   float servo_stall_torque = 11.40;
   float servo_unload_current = .300;
   float servo_load_current = 3.000;
-  return 11.40 * (servo_force - servo_unload_current)/(servo_load - servo_unload_current);
+  return 11.40 * (servo_amperage - servo_unload_current)/(servo_load_current - servo_unload_current);
 }
 #endif
-/*
+
 #if USING_STRAIN_GAUGE
-_offset = 0;
-_scale = 1;
-_gain = 128;
-_mode = 0x04;
-_lastRead = 0x04;
+uint8_t _offset = 0;
+uint8_t _scale = 1;
+uint8_t _gain = 128;
+uint8_t _mode = 0x04;
+uint8_t _lastRead = 0;
 
 
 void strainReset()
 {
-  power_down();
-  power_up();
+  powerDown();
+  powerUp();
   _offset   = 0;
   _scale    = 1;
   _gain     = 128;
@@ -600,19 +601,32 @@ void strainReset()
 }
 bool strainIsReady()
 {
-  return digitalRead(_dataPin) == LOW;
+  return digitalRead(PIN_DOUT) == LOW;
 }
+void powerDown(){
+  //  at least 60 us HIGH
+  digitalWrite(MUX_INPUT, HIGH);
+  delayMicroseconds(64);
+}
+void powerUp(){
+  digitalWrite(MUX_INPUT, LOW);
+}
+
 
 void strainBegin()
 {
-  pinMode(DOUT, INPUT )
+  pinMode(PIN_DOUT, INPUT);
+  powerDown();
+  powerUp();
 }
+
+
 uint8_t strainShiftIn()
 {
   //  local variables are faster.
-  pinMode(MUX_INPUT,OUTPUT)
+  pinMode(MUX_INPUT,OUTPUT);
   uint8_t clk   = MUX_INPUT;
-  uint8_t data  = DATA_OUT;
+  uint8_t data  = PIN_DOUT;
   uint8_t value = 0;
   uint8_t mask  = 0x80;
   while (mask > 0)
@@ -627,16 +641,83 @@ uint8_t strainShiftIn()
     delayMicroseconds(1);   //  keep duty cycle ~50%
     mask >>= 1;
   }
-  pinMode(MUX_INPUT,INPUT)
+  pinMode(MUX_INPUT,INPUT);
   return value;
 }
-    void strain_gauge_begin()
-    {
+
+float read()
+{
+  //  this BLOCKING wait takes most time...
+  while (digitalRead(PIN_DOUT) == HIGH) yield();
+
+  union
+  {
+    long value = 0;
+    uint8_t data[4];
+  } v;
+
+  //  blocking part ...
+  noInterrupts();
+
+  //  Pulse the clock pin 24 times to read the data.
+  //  v.data[2] = shiftIn(PIN_DOUT, MUX_INPUT, MSBFIRST);
+  //  v.data[1] = shiftIn(PIN_DOUT, MUX_INPUT, MSBFIRST);
+  //  v.data[0] = shiftIn(PIN_DOUT, MUX_INPUT, MSBFIRST);
+  v.data[2] = strainShiftIn();
+  v.data[1] = strainShiftIn();
+  v.data[0] = strainShiftIn();
+
+  //  TABLE 3 page 4 datasheet
+  //
+  //  CLOCK      CHANNEL      GAIN      m
+  //  ------------------------------------
+  //   25           A         128       1    //  default
+  //   26           B          32       2
+  //   27           A          64       3
+  //
+  //  only default 128 verified,
+  //  selection goes through the set_gain(gain)
+  //
+  uint8_t m = 1;
+
+  while (m > 0)
+  {
+    delayMicroseconds(1); //needed for fast processors?
+    digitalWrite(MUX_INPUT, HIGH);
+    digitalWrite(MUX_INPUT, LOW);
+    m--;
+  }
+}
+
+ void gaugeIntitialize(){
       readMux(PIN_STRAIN_GAGUE_THUMB);
+      strainBegin();
       readMux(PIN_STRAIN_GAGUE_INDEX);
+      strainBegin();
       readMux(PIN_STRAIN_GAGUE_MIDDLE);
+      strainBegin();
       readMux(PIN_STRAIN_GAGUE_RING);
+      strainBegin();
       readMux(PIN_STRAIN_GAGUE_PINKY);
+      strainBegin();
     }
+
+  int gaugeGetUnits(){
+      uint32_t raw_readings[5];
+      readMux(PIN_STRAIN_GAGUE_THUMB);
+      raw_readings[0] = read();
+      readMux(PIN_STRAIN_GAGUE_INDEX);
+      raw_readings[1] = read();
+      readMux(PIN_STRAIN_GAGUE_MIDDLE);
+      raw_readings[2] = read();
+      readMux(PIN_STRAIN_GAGUE_RING);
+      raw_readings[3] = read();
+      readMux(PIN_STRAIN_GAGUE_PINKY);
+      raw_readings[4] = read();
+  }
+
+  
+
+
+
 #endif
-*/

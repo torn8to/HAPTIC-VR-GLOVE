@@ -55,14 +55,12 @@
 #define NO_THUMB false //If for some reason you don't want to track the thumb
 
 #define USING_CALIB_PIN true //When PIN_CALIB is shorted (or it's button pushed) it will reset calibration if this is on.
-
+#define USING_STRAIN_GAUGE true
 #define USING_FORCE_FEEDBACK false //Force feedback haptics allow you to feel the solid objects you hold
 #define FLIP_FORCE_FEEDBACK true
 #define SERVO_SCALING false //dynamic scaling of servo motors
 
 
-
-#define USING_STRAIN_GAUGE 
 
 #if defined(ESP32)
   //(This configuration is for ESP32 DOIT V1 so make sure to change if you're on another board)
@@ -91,7 +89,7 @@
   #define PIN_CURRENT_SENSOR_PINKY MUX(16)
   #define PIN_CURRENT_SENSOR_RING MUX(17)
   #define PIN_CURRENT_SENSOR_MIDDLE MUX(18)
-  #define PIN_CURRENT_SENSOR_POINTER MUX(19)
+  #define PIN_CURRENT_SENSOR_INDEX MUX(19)
   #define PIN_CURRENT_SENSOR_THUMB MUX(20)
 
   #define PIN_STRAIN_GAGUE_PINKY MUX(0)
