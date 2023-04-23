@@ -1,5 +1,5 @@
 #if USING_FORCE_FEEDBACK
-
+//#include "HX711.h"
 #if defined(ESP32)
   #include "ESP32Servo.h"
 #else
@@ -31,7 +31,7 @@ void scaleLimits(int* hapticLimits, float* scaledLimits){
   }
   
 }
-
+//I have no idea what is going on here i thinkk i need t o calculate this 
 //dynamic scaling, maps to the limits calibrated from your finger
 void dynScaleLimits(int* hapticLimits, float* scaledLimits){
   //will be refactored to take min and max as an argument
@@ -45,8 +45,14 @@ void dynScaleLimits(int* hapticLimits, float* scaledLimits){
     scaledLimits[i] = hapticLimits[i] / 1000.0f * 180.0f;
   }
 }
+/*
+int* getControlError(int strainGauge,target_output){
 
+
+}
+*/
 void writeServoHaptics(int* hapticLimits){
+  
   float scaledLimits[5];
   scaleLimits(hapticLimits, scaledLimits);
   if(hapticLimits[0] >= 0) thumbServo.write(scaledLimits[0]);

@@ -4,6 +4,10 @@
   #include <RunningMedian.h>
 #endif
 
+
+
+
+
 #if ENABLE_MEDIAN_FILTER
   RunningMedian rmSamples[10] = {
       RunningMedian(MEDIAN_SAMPLES),
@@ -66,10 +70,9 @@ int minFingers[10] = {ANALOG_MAX, ANALOG_MAX, ANALOG_MAX, ANALOG_MAX, ANALOG_MAX
   int totalOffset1[5] = {0,0,0,0,0};
 #endif
 
+
+
 void setupInputs(){
-  pinMode(PIN_JOY_BTN, INPUT_PULLUP);
-  pinMode(PIN_A_BTN, INPUT_PULLUP);
-  pinMode(PIN_B_BTN, INPUT_PULLUP);
 
   pinMode(PIN_MENU_BTN, INPUT_PULLUP);
   
@@ -89,6 +92,20 @@ void setupInputs(){
   pinMode(PIN_CALIB, INPUT_PULLUP);
   #endif
 
+  #if USING_STRAIN_GAGUE && USING_MULTIPLEXER
+  int readStrainGauge()
+  { 
+  int current reading
+  int reading = 0;
+  for(int i = 0; i <24;i++)
+    {
+      
+    }
+  }
+  
+  
+  #endif
+
   #if USING_MULTIPLEXER
   byte selectPins[] = {PINS_MUX_SELECT};
   //pinMode(MUX_INPUT, INPUT);
@@ -97,6 +114,7 @@ void setupInputs(){
   }
   #endif
 }
+
 
 int analogPinRead(int pin){
   #if USING_MULTIPLEXER
@@ -217,13 +235,136 @@ int readMux(byte pin){
       digitalWrite(selectPins[2], HIGH);
       digitalWrite(selectPins[3], HIGH);
       break;
+    case 16:
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 17:
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 18:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], LOW);
+      break;
+   case 19:
+      readSecondMux();
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], LOW);
+      break;
+   case 20:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 21:
+      readSecondMux();
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 22:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 23:
+      readSecondMux();
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], LOW);
+      break;
+    case 24:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+    case 25:
+      readSecondMux();
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+   case 26:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], LOW);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+    case 27:
+      readSecondMux();
+      digitalWrite(selectPins[0], HIGH);
+      digitalWrite(selectPins[1], HIGH);
+      digitalWrite(selectPins[2], LOW);
+      digitalWrite(selectPins[3], HIGH);
+      break;
+    case 28:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+    case 29:
+      readSecondMux();
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], LOW);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+    case 30:
+      readSecondMux();
+      digitalWrite(selectPins[4], LOW);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+   case 31:
+      readSecondMux();      
+      digitalWrite(selectPins[4], HIGH);
+      digitalWrite(selectPins[5], HIGH);
+      digitalWrite(selectPins[6], HIGH);
+      digitalWrite(selectPins[7], HIGH);
+      break;
+    
+    
+
   }
   delayMicroseconds(MULTIPLEXER_DELAY);
   return analogRead(MUX_INPUT);
 }
+
+
+void readSecondMux()
+{
+  digitalWrite(selectPins[0], HIGH);
+  digitalWrite(selectPins[1], LOW);
+  digitalWrite(selectPins[3], HIGH);
+  digitalWrite(selectPins[2], HIGH);
+}
 #endif
 
 void getFingerPositions(bool calibrating, bool reset){
+  //int fingerPos[5] = {0,0,0,0}
   #if FLEXION_MIXING == MIXING_NONE //no mixing, just linear
   int rawFingersFlexion[5] = {NO_THUMB?0:analogPinRead(PIN_THUMB), analogPinRead(PIN_INDEX), analogPinRead(PIN_MIDDLE), analogPinRead(PIN_RING), analogPinRead(PIN_PINKY)};
   
@@ -294,6 +435,7 @@ void getFingerPositions(bool calibrating, bool reset){
       if (rawFingers[i] > maxFingers[i])
         #if CLAMP_SENSORS
           maxFingers[i] = ( rawFingers[i] <= CLAMP_MAX )? rawFingers[i] : CLAMP_MAX;
+
         #else
           maxFingers[i] = rawFingers[i];
         #endif
@@ -323,6 +465,7 @@ void getFingerPositions(bool calibrating, bool reset){
   }
 }
 
+
 int analogReadDeadzone(int pin){
   int raw = analogPinRead(pin);
   if (abs(ANALOG_MAX/2 - raw) < JOYSTICK_DEADZONE * ANALOG_MAX / 100)
@@ -335,9 +478,9 @@ int getJoyX(){
   #if JOYSTICK_BLANK
   return ANALOG_MAX/2;
   #elif JOY_FLIP_X
-  return ANALOG_MAX - analogReadDeadzone(PIN_JOY_X);
+  return ANALOG_MAX - joyDeadzone(d(JOY_X_DICTIONARY).toInt()));
   #else
-  return analogReadDeadzone(PIN_JOY_X);
+  return joyDeadzone(d(JOY_X_DICTIONARY).toInt())
   #endif
 }
 
@@ -345,13 +488,13 @@ int getJoyY(){
   #if JOYSTICK_BLANK
   return ANALOG_MAX/2;
   #elif JOY_FLIP_Y
-  return ANALOG_MAX - analogReadDeadzone(PIN_JOY_Y);
+  return ANALOG_MAX - joyDeadzone(d(JOY_Y_DICTIONARY).toInt());
   #else
-  return analogReadDeadzone(PIN_JOY_Y);
+  return joyDeadzone(d(JOY_Y_DICTIONARY).toInt());
   #endif
 }
-
-bool getButton(byte pin){
+// TODO CHANGE FOR THE A AND B BUTTON AND UPDATES BASED ON THE LAST DICTIONASRY INPUT
+bool getButton(byte pin){ 
   return digitalRead(pin) != HIGH;
 }
 
@@ -405,3 +548,95 @@ int sinCosMix(int sinPin, int cosPin, int i){
   
 }
 #endif
+ 
+
+#if USING_CURRENT_SENSOR
+float* getCurrentSensorsRaw()
+{
+  float[5] servo_force;
+  readMux(PIN_CURRENT_SENSOR_THUMB);
+  servo_force[0] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  readMux(PIN_CURRENT_SENSOR_INDEX);
+  servo_force[1] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  readMux(PIN_CURRENT_SENSOR_RING);
+  servo_force[2] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  readMux(PIN_CURRENT_SENSOR_INDEX);
+  servo_force[3] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  readMux(PIN_CURRENT_SENSOR_PINKY);
+  servo_force[4] = servo_processing(current_processing(analogReadPin(MUX_INPUT)));
+  return current_ADC;
+}
+
+float current_processing(int adc_value){
+    return(((float) adc_value / 4096.0) * 4.2) * 1000 *.8;
+}
+
+float servo_processing(float servo_amperage)
+{
+  float servo_stall_torque = 11.40;
+  float servo_unload_current = .300;
+  float servo_load_current = 3.000;
+  return 11.40 * (servo_force - servo_unload_current)/(servo_load - servo_unload_current);
+}
+#endif
+/*
+#if USING_STRAIN_GAUGE
+_offset = 0;
+_scale = 1;
+_gain = 128;
+_mode = 0x04;
+_lastRead = 0x04;
+
+
+void strainReset()
+{
+  power_down();
+  power_up();
+  _offset   = 0;
+  _scale    = 1;
+  _gain     = 128;
+  _lastRead = 0;
+  _mode     = 0x04;
+}
+bool strainIsReady()
+{
+  return digitalRead(_dataPin) == LOW;
+}
+
+void strainBegin()
+{
+  pinMode(DOUT, INPUT )
+}
+uint8_t strainShiftIn()
+{
+  //  local variables are faster.
+  pinMode(MUX_INPUT,OUTPUT)
+  uint8_t clk   = MUX_INPUT;
+  uint8_t data  = DATA_OUT;
+  uint8_t value = 0;
+  uint8_t mask  = 0x80;
+  while (mask > 0)
+  {
+    digitalWrite(clk, HIGH);
+    delayMicroseconds(1);   //  T2  >= 0.2 us
+    if (digitalRead(data) == HIGH)
+    {
+      value |= mask;
+    }
+    digitalWrite(clk, LOW);
+    delayMicroseconds(1);   //  keep duty cycle ~50%
+    mask >>= 1;
+  }
+  pinMode(MUX_INPUT,INPUT)
+  return value;
+}
+    void strain_gauge_begin()
+    {
+      readMux(PIN_STRAIN_GAGUE_THUMB);
+      readMux(PIN_STRAIN_GAGUE_INDEX);
+      readMux(PIN_STRAIN_GAGUE_MIDDLE);
+      readMux(PIN_STRAIN_GAGUE_RING);
+      readMux(PIN_STRAIN_GAGUE_PINKY);
+    }
+#endif
+*/

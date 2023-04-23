@@ -1,4 +1,4 @@
-/*struct inputData {
+  /*struct inputData {
   int* flexion;
   int joyX;
   int joyY;
