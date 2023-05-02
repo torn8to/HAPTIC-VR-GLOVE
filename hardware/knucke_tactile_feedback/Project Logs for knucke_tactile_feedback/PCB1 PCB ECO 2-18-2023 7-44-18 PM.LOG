@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=Designator32-1
+Removed Pin From Net: NetName=GND Pin=Designator32-2
+Removed Pin From Net: NetName=GND Pin=Designator33-1
+Removed Pin From Net: NetName=GND Pin=Designator33-2
+Added Component: Designator=J?(2121340002)
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.molex.com/pdm_docs/sd/2121340002_sd.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "212134-0002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = "1.4mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Molex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "212134-0002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "538-212134-0002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Molex/212134-0002?qs=hd1VzrDQEGhMEPSgG43Vcg%3D%3D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "212134-0002.SchLib"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=3.3 Pin=J?-MP2
+Added Pin To Net: NetName=NetJ?_MP1 Pin=J?-MP1
+Added Net: Name=NetJ?_MP1
+Added Member To Class: ClassName=hallbridge and connectors Member=Component J? 212134-0002

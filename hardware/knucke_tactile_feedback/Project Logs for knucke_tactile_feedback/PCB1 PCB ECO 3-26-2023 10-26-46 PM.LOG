@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=source Pin=U3-3
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=U3-2
+Added Net: Name=NetQ1_1

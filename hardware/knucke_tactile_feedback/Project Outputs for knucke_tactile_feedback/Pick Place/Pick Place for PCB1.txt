@@ -1,0 +1,36 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\knucke_tactile_feedback\Project Outputs for knucke_tactile_feedback\Pick Place\Pick Place for PCB1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/04/23
+Time:       11:46
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment            Layer       Footprint                          Center-X(mil) Center-Y(mil) Rotation Description                                                                                        
+U3         HX711              TopLayer    SOIC127P600X160-16N                485.000       1945.000      180      "ADC, Delta-Sigma, 24-Bit, 1 Func, 2 Channel, Serial Access, PDSO16"                               
+R13        ERA6AEB101V        TopLayer    RESC2013X60X40ML20T25              475.000       2200.000      0        ""                                                                                                 
+R12        ERA6AEB101V        TopLayer    RESC2013X60X40ML20T25              665.000       2220.000      270      ""                                                                                                 
+R11        CRCW08058K20FKEA   TopLayer    RESC2013X50X30NL20T20              255.000       2336.417      90       ""                                                                                                 
+R10        ERA6AEB203V        TopLayer    FP-ERA6A-MFG                       250.000       2660.000      90       "RES 20K OHM 0.1% 1/8W 0805"                                                                       
+R9         CRCW1210150RFKTA   TopLayer    RESC3225X60X45LL20T20              355.000       2695.000      90       ""                                                                                                 
+R8         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              590.000       2325.945      270      ""                                                                                                 
+R7         CRCW1210150RFKTA   TopLayer    RESC3225X60X45LL20T20              490.000       2428.150      90       ""                                                                                                 
+R6         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              600.000       2525.000      90       ""                                                                                                 
+R5         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              285.000       2065.000      90       ""                                                                                                 
+R4         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              300.000       2855.000      180      ""                                                                                                 
+R3         CRCW1210150RFKTA   TopLayer    RESC3225X60X45LL20T20              326.850       2215.000      0        ""                                                                                                 
+R2         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              425.945       2310.000      180      ""                                                                                                 
+R1         TNPU1206100RBZEN00 TopLayer    RESC3216X65X50ML15T25              495.000       2645.000      90       ""                                                                                                 
+Q1         MMBT4403LT1G       TopLayer    ONSC-SOT-23-3-318-08_V             355.630       2485.000      0        "Switching Transistor, PNP Silicon, 3-Pin SOT-23, Pb-Free, Tape and Reel"                          
+C3         GRM155R71C104KA88D TopLayer    FP-GRM15-MFG                       585.000       2170.000      180      "CAP CER 0.1UF 16V X7R 0402"                                                                       
+C2         GRM155R71C104KA88D TopLayer    FP-GRM15-MFG                       655.000       1995.000      270      "CAP CER 0.1UF 16V X7R 0402"                                                                       
+C1         GRM188R60J106ME47D TopLayer    FP-GRM188-0_1-e0_2_0_55-IPC_A      450.000       2850.000      90       "Chip Multilayer Ceramic Capacitors for General Purpose, 0603, 10uF, X5R, 15%, 20%, 6.3V"          
+J2         212134-0002        TopLayer    2121340002                         590.039       2858.740      0        "PICO-EZMATE PLUS1.0 PLUGASSY ETP LH 2CKT - Tape and Reel"                                         
+U2         TMAG5231B1DQDBZR   TopLayer    FP-DBZ0003A-IPC_B                  295.000       1640.000      270      "LOW-POWER, LOW-VOLTAGE (1.65 V T"                                                                 
+J1         53254-0870         BottomLayer SHDRRA8W50P0X200_1X8_1800X730X440P 491.850       510.000       0        "Headers & Wire Housings 8CKT WTB R/A"                                                             
+U1         TMAG5231B1DQDBZR   TopLayer    FP-DBZ0003A-IPC_B                  295.000       1374.857      270      "LOW-POWER, LOW-VOLTAGE (1.65 V T"                                                                 
+P2         TSW-103-07-L-S     TopLayer    SMTC-TSW-103-07-X-S                70.000        510.000       90       "0.025" SQ Post Header, Through-hole, Vertical, -55 to 125 degC, 2.54 mm Pitch, 3-Pin, Male, RoHS" 

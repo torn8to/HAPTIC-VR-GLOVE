@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=GND Pin=Designator28-1
+Removed Pin From Net: NetName=GND Pin=Designator28-2
+Removed Pin From Net: NetName=NetJ1_7 Pin=Designator29-1
+Removed Pin From Net: NetName=NetJ1_7 Pin=Designator29-2
+Removed Pin From Net: NetName=NetJ1_8 Pin=J2-1
+Removed Pin From Net: NetName=NetJ1_8 Pin=J2-2
+Removed Pin From Net: NetName=3.3 Pin=J2-3
+Removed Pin From Net: NetName=3.3 Pin=J2-4
+Change Component Footprint: Designator=J2 Old Footprint=MOLX-52207-0460 New Footprint=2147210020
+Change Component Comment : Designator=J2 Old Comment=52207-0460 New Comment=214721-0020
+Change Managed Component Library Link : Designator=J2 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=51e956a6-a723-45fa-b2ed-45bb03b0de78 Old ItemGUID=BE4D2A6C-D12E-4619-B5E8-B6D5CDC88F44 New ItemGUID=7D860D17-D99F-4C7C-A10D-699A3D7E4801 Old RevisionGUID=46719468-2822-4AD2-A9F1-0A6B4DDF69B3 New RevisionGUID=3423B612-6BC8-4201-ABC2-9743D35570C5
+Change component parameters: Designator = "J2" ("J2"); Footprint = "MOLX-52207-0460"; UniqueID = "\QDHNQVMY" ("\QDHNQVMY")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://www.molex.com/pdm_docs/sd/2147210020_sd.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Design Item ID"; Value = "214721-0020"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = "1.8mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Molex"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "214721-0020"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "538-214721-0020"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Molex/214721-0020?qs=MyNHzdoqoQJuaxNu%2FSk2cw%3D%3D"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Testing Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Testing Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Source"; Value = "214721-0020.SchLib"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3.3 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Net: Name=NetJ2_2

@@ -1,0 +1,106 @@
+Added Component: Designator=*(12.5mm button-Footprint-1)
+Add component (AddParameter): Name = "Actuator Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "PC Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Throw Configuration"; Value = "SPST"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin *-2
+Change Net Name : Old Net Name=NetJ6_2 New Net Name=BUTTON_B
+Change Net Name : Old Net Name=NetJ6_3 New Net Name=BUTTON_A
+Change Net Name : Old Net Name=NetJ6_4 New Net Name=JOY_BUTTON
+Change Net Name : Old Net Name=NetJ6_5 New Net Name=JOY_Y
+Change Net Name : Old Net Name=NetJ6_6 New Net Name=JOY_X
+Change Net Name : Old Net Name=NetP2_6 New Net Name=MUX_OUTPUT
+Change Net Name : Old Net Name=NetP2_15 New Net Name=E
+Change Net Name : Old Net Name=NetP2_16 New Net Name=I2C_CLK
+Change Net Name : Old Net Name=NetP2_19 New Net Name=I2C_SDA
+Change Net Name : Old Net Name=NetU3_16 New Net Name=CONFIG_BUTTON
+Change Net Name : Old Net Name=NetU3_17 New Net Name=MUX_2_OUT
+Change Net Name : Old Net Name=NetU4_7 New Net Name=CURRENT_SENSOR_4
+Change Net Name : Old Net Name=NetU5_7 New Net Name=CURRENT_SENSOR_3
+Change Net Name : Old Net Name=NetU6_7 New Net Name=CURRENT_SENSOR_1
+Change Net Name : Old Net Name=NetU7_7 New Net Name=CURRENT_SENSOR_2
+Change Net Name : Old Net Name=NetU8_7 New Net Name=CURRENT_SENSOR_0
+Added Pin To Net: NetName=MAG_1_1 Pin=J1-5
+Added Pin To Net: NetName=MAG_1_1 Pin=U3-7
+Added Net: Name=MAG_1_1
+Added Pin To Net: NetName=MAG_1_2 Pin=J1-4
+Added Pin To Net: NetName=MAG_1_2 Pin=U3-6
+Added Net: Name=MAG_1_2
+Added Pin To Net: NetName=MAG_2_1 Pin=J2-5
+Added Pin To Net: NetName=MAG_2_1 Pin=U3-3
+Added Net: Name=MAG_2_1
+Added Pin To Net: NetName=MAG_2_2 Pin=J2-4
+Added Pin To Net: NetName=MAG_2_2 Pin=U3-2
+Added Net: Name=MAG_2_2
+Added Pin To Net: NetName=MAG_3_1 Pin=J3-5
+Added Pin To Net: NetName=MAG_3_1 Pin=U3-21
+Added Net: Name=MAG_3_1
+Added Pin To Net: NetName=MAG_3_2 Pin=J3-4
+Added Pin To Net: NetName=MAG_3_2 Pin=U3-20
+Added Net: Name=MAG_3_2
+Added Pin To Net: NetName=MAG_4_1 Pin=J4-5
+Added Pin To Net: NetName=MAG_4_1 Pin=U9-4
+Added Net: Name=MAG_4_1
+Added Pin To Net: NetName=MAG_4_2 Pin=J4-4
+Added Pin To Net: NetName=MAG_4_2 Pin=U9-3
+Added Net: Name=MAG_4_2
+Added Pin To Net: NetName=MAG_5_1 Pin=J5-5
+Added Pin To Net: NetName=MAG_5_1 Pin=U9-22
+Added Net: Name=MAG_5_1
+Added Pin To Net: NetName=MAG_5_2 Pin=J5-4
+Added Pin To Net: NetName=MAG_5_2 Pin=U9-21
+Added Net: Name=MAG_5_2
+Added Pin To Net: NetName=MOTOR_0 Pin=J1-2
+Added Pin To Net: NetName=MOTOR_0 Pin=P1-9
+Added Pin To Net: NetName=MOTOR_0 Pin=P1-10
+Added Net: Name=MOTOR_0
+Added Pin To Net: NetName=MOTOR_1 Pin=J2-2
+Added Pin To Net: NetName=MOTOR_1 Pin=P1-11
+Added Net: Name=MOTOR_1
+Added Pin To Net: NetName=MOTOR_2 Pin=J3-2
+Added Pin To Net: NetName=MOTOR_2 Pin=P1-12
+Added Net: Name=MOTOR_2
+Added Pin To Net: NetName=MOTOR_3 Pin=J4-2
+Added Pin To Net: NetName=MOTOR_3 Pin=P1-13
+Added Net: Name=MOTOR_3
+Added Pin To Net: NetName=MOTOR_4 Pin=J5-2
+Added Pin To Net: NetName=MOTOR_4 Pin=P1-14
+Added Net: Name=MOTOR_4
+Added Pin To Net: NetName=SG_1_N Pin=J1-7
+Added Pin To Net: NetName=SG_1_N Pin=U3-8
+Added Net: Name=SG_1_N
+Added Pin To Net: NetName=SG_1_P Pin=J1-8
+Added Pin To Net: NetName=SG_1_P Pin=U3-9
+Added Net: Name=SG_1_P
+Added Pin To Net: NetName=SG_2_N Pin=J2-7
+Added Pin To Net: NetName=SG_2_N Pin=U3-4
+Added Net: Name=SG_2_N
+Added Pin To Net: NetName=SG_2_P Pin=J2-8
+Added Pin To Net: NetName=SG_2_P Pin=U3-5
+Added Net: Name=SG_2_P
+Added Pin To Net: NetName=SG_3_N Pin=J3-7
+Added Pin To Net: NetName=SG_3_N Pin=U3-22
+Added Net: Name=SG_3_N
+Added Pin To Net: NetName=SG_3_P Pin=J3-8
+Added Pin To Net: NetName=SG_3_P Pin=U3-23
+Added Net: Name=SG_3_P
+Added Pin To Net: NetName=SG_4_N Pin=J4-7
+Added Pin To Net: NetName=SG_4_N Pin=U3-18
+Added Net: Name=SG_4_N
+Added Pin To Net: NetName=SG_4_P Pin=J4-8
+Added Pin To Net: NetName=SG_4_P Pin=U3-19
+Added Net: Name=SG_4_P
+Added Pin To Net: NetName=SG_5_N Pin=J5-7
+Added Pin To Net: NetName=SG_5_N Pin=U9-23
+Added Net: Name=SG_5_N
+Added Pin To Net: NetName=SG_5_P Pin=J5-8
+Added Pin To Net: NetName=SG_5_P Pin=U9-2
+Added Net: Name=SG_5_P
+Added Class: Name=U_PIN HEADERS
+Added Class: Name=U_tactile_power
+Added Member To Class: ClassName=U_power_esp32 Member=Component * 12.5mm button
+Change Room Name: Old Name=tactile_power New Name=U_tactile_power
+Change Room Scope: Old Scope=InComponentClass('tactile_power') New Scope=InComponentClass('U_tactile_power')
+Added Room: Name=U_PIN HEADERS
+Added Room: Name=U_power_esp32

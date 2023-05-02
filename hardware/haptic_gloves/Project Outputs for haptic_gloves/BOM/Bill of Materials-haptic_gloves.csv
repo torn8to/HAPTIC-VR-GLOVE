@@ -1,0 +1,15 @@
+comment,Designator,Footprint
+,,
+"Spacer, Round, 1/4 Inch O.D., 1/4 Inch Long, #8 Hole, Phenolic",,
+"KEYSTONE - 1048 - BATTERY HOLDER, 18650 LI-ION, 2CELL, SMD",B2,
+100 nf,"C1, C3",2
+330 nf,C2,1206_C
+10 uf,C4,1206_C
+1uf,"C5, C7, C9, C10, C13",0805_C
+4.7nf,"C6, C8, C11, C12, C14",1206_C
+,"J1, J2, J3, J4, J5, J6",.1 1x8
+"THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 20 pins","P1, P2",2.54mm to 
+"Positive Voltage Regulator, 5V, 3-Pin TO-220",U1,1
+"Fixed Low Drop Positive Voltage Regulator, 3.3V, 3-Pin TO-220",U2,1
+analog mux,"U3, U9",ssop-24
+SENSOR CURRENT HALL,"U4, U5, U6, U7, U8",8 soic

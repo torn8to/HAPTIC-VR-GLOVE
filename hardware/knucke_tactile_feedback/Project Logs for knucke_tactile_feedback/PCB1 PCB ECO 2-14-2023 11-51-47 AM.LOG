@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=J1-1
+Removed Pin From Net: NetName=3.3 Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J1-6
+Removed Pin From Net: NetName=VCC Pin=J1-8
+Removed Pin From Net: NetName=NetJ1_4 Pin=R1-1
+Removed Pin From Net: NetName=NetJ1_4 Pin=R4-1
+Removed Pin From Net: NetName=NetJ1_5 Pin=U1-2
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=3.3 Pin=J1-7
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Pin To Net: NetName=NetJ1_5 Pin=R2-2
+Added Pin To Net: NetName=NetJ1_4 Pin=U1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=P2-2
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ1_6 Pin=J1-6
+Added Pin To Net: NetName=NetJ1_6 Pin=R1-1
+Added Pin To Net: NetName=NetJ1_6 Pin=R4-1
+Added Net: Name=NetJ1_6
+Added Member To Class: ClassName=hallbridge and connectors Member=Component J2 52207-0460

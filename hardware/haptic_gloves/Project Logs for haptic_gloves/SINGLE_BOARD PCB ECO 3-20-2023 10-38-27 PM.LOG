@@ -1,0 +1,47 @@
+Change Component Designator: OldDesignator=J? NewDesignator=J6
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Change Component Designator: OldDesignator=U? NewDesignator=U9
+Added Pin To Net: NetName=+5 Pin=C3-2
+Added Pin To Net: NetName=+5 Pin=U2-3
+Change Net Name : Old Net Name=NetJ?_2 New Net Name=NetJ6_2
+Change Net Name : Old Net Name=NetJ?_3 New Net Name=NetJ6_3
+Change Net Name : Old Net Name=NetJ?_4 New Net Name=NetJ6_4
+Change Net Name : Old Net Name=NetJ?_5 New Net Name=NetJ6_5
+Change Net Name : Old Net Name=NetJ?_6 New Net Name=NetJ6_6
+Change Net Name : Old Net Name=NetP?_7 New Net Name=NetP2_7
+Change Net Name : Old Net Name=NetP?_8 New Net Name=NetP2_8
+Change Net Name : Old Net Name=NetP?_9 New Net Name=NetP2_9
+Change Net Name : Old Net Name=NetP?_10 New Net Name=NetP1_10
+Change Net Name : Old Net Name=NetP?_11 New Net Name=NetP2_11
+Change Net Name : Old Net Name=NetP?_12 New Net Name=NetP2_12
+Change Net Name : Old Net Name=NetP?_13 New Net Name=NetP2_13
+Change Net Name : Old Net Name=NetP?_14 New Net Name=NetP1_14
+Change Net Name : Old Net Name=NetP?_15 New Net Name=NetP2_15
+Change Net Name : Old Net Name=NetP?_16 New Net Name=NetP2_16
+Change Net Name : Old Net Name=NetP?_19 New Net Name=NetP2_19
+Change Net Name : Old Net Name=NetU?_2 New Net Name=NetU9_2
+Change Net Name : Old Net Name=NetU?_3 New Net Name=NetU9_3
+Change Net Name : Old Net Name=NetU?_4 New Net Name=NetU9_4
+Change Net Name : Old Net Name=NetU?_21 New Net Name=NetU9_21
+Change Net Name : Old Net Name=NetU?_22 New Net Name=NetU9_22
+Change Net Name : Old Net Name=NetU?_23 New Net Name=NetU9_23
+Added Pin To Net: NetName=NetJ5_2 Pin=J5-2
+Added Net: Name=NetJ5_2
+Added Pin To Net: NetName=NetP1_6 Pin=P1-6
+Added Pin To Net: NetName=NetP1_6 Pin=U3-1
+Added Net: Name=NetP1_6
+Added Pin To Net: NetName=NetP1_11 Pin=P1-11
+Added Net: Name=NetP1_11
+Added Pin To Net: NetName=NetP1_12 Pin=P1-12
+Added Net: Name=NetP1_12
+Added Pin To Net: NetName=NetP1_13 Pin=P1-13
+Added Net: Name=NetP1_13
+Added Pin To Net: NetName=NetP2_10 Pin=P2-10
+Added Pin To Net: NetName=NetP2_10 Pin=U9-13
+Added Net: Name=NetP2_10
+Added Pin To Net: NetName=NetP2_14 Pin=P2-14
+Added Pin To Net: NetName=NetP2_14 Pin=U3-13
+Added Net: Name=NetP2_14
+Added Member To Class: ClassName=power_esp32 Member=Component P2 61302011121
+Added Room: Name=tactile_power

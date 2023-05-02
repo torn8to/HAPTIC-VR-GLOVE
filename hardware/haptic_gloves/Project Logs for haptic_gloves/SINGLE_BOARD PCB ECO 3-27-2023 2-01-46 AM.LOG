@@ -1,0 +1,16 @@
+Added Component: Designator=*(12.5mm button-Footprint-1)
+Add component (AddParameter): Name = "Actuator Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "PC Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Throw Configuration"; Value = "SPST"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin *-2
+Add Pin To Net: Unknown Pin: Pin *-3
+Added Pin To Net: NetName=dout Pin=J1-7
+Added Pin To Net: NetName=dout Pin=J2-7
+Added Pin To Net: NetName=dout Pin=J3-7
+Added Pin To Net: NetName=dout Pin=J4-7
+Added Pin To Net: NetName=dout Pin=J5-7
+Added Pin To Net: NetName=dout Pin=P1-8
+Added Net: Name=dout
+Added Member To Class: ClassName=U_power_esp32 Member=Component * 12.5mm button

@@ -1,0 +1,36 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\knucke_tactile_feedback\Project Outputs for knucke_tactile_feedback\Pick Place\Pick Place for PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/04/23
+Time:       12:29
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"U3","HX711","TopLayer","SOIC127P600X160-16N","12.3190","49.4030","180","ADC, Delta-Sigma, 24-Bit, 1 Func, 2 Channel, Serial Access, PDSO16"
+"R13","ERA6AEB101V","TopLayer","RESC2013X60X40ML20T25","12.0650","55.8800","0",""
+"R12","ERA6AEB101V","TopLayer","RESC2013X60X40ML20T25","17.1450","56.3880","270",""
+"R11","CRCW08058K20FKEA","TopLayer","RESC2013X50X30NL20T20","6.4770","59.3450","90",""
+"R10","ERA6AEB203V","TopLayer","FP-ERA6A-MFG","6.3500","67.5640","90","RES 20K OHM 0.1% 1/8W 0805"
+"R9","CRCW1210150RFKTA","TopLayer","RESC3225X60X45LL20T20","9.0170","68.4530","90",""
+"R8","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","14.9860","59.0790","270",""
+"R7","CRCW1210150RFKTA","TopLayer","RESC3225X60X45LL20T20","12.4460","61.6750","90",""
+"R6","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","15.2400","64.1350","90",""
+"R5","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","7.2390","52.4510","90",""
+"R4","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","7.6200","72.5170","180",""
+"R3","CRCW1210150RFKTA","TopLayer","RESC3225X60X45LL20T20","8.3020","56.2610","0",""
+"R2","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","10.8190","58.6740","180",""
+"R1","TNPU1206100RBZEN00","TopLayer","RESC3216X65X50ML15T25","12.5730","67.1830","90",""
+"Q1","MMBT4403LT1G","TopLayer","ONSC-SOT-23-3-318-08_V","9.0330","63.1190","0","Switching Transistor, PNP Silicon, 3-Pin SOT-23, Pb-Free, Tape and Reel"
+"C3","GRM155R71C104KA88D","TopLayer","FP-GRM15-MFG","14.8590","55.1180","180","CAP CER 0.1UF 16V X7R 0402"
+"C2","GRM155R71C104KA88D","TopLayer","FP-GRM15-MFG","16.6370","50.6730","270","CAP CER 0.1UF 16V X7R 0402"
+"C1","GRM188R60J106ME47D","TopLayer","FP-GRM188-0_1-e0_2_0_55-IPC_A","11.4300","72.3900","90","Chip Multilayer Ceramic Capacitors for General Purpose, 0603, 10uF, X5R, 15%, 20%, 6.3V"
+"J2","212134-0002","TopLayer","2121340002","14.9870","72.6120","0","PICO-EZMATE PLUS1.0 PLUGASSY ETP LH 2CKT - Tape and Reel"
+"U2","TMAG5231B1DQDBZR","TopLayer","FP-DBZ0003A-IPC_B","7.4930","41.6560","270","LOW-POWER, LOW-VOLTAGE (1.65 V T"
+"J1","53254-0870","BottomLayer","SHDRRA8W50P0X200_1X8_1800X730X440P","12.4930","12.9540","0","Headers & Wire Housings 8CKT WTB R/A"
+"U1","TMAG5231B1DQDBZR","TopLayer","FP-DBZ0003A-IPC_B","7.4930","34.9214","270","LOW-POWER, LOW-VOLTAGE (1.65 V T"
+"P2","TSW-103-07-L-S","TopLayer","SMTC-TSW-103-07-X-S","1.7780","12.9540","90","0.025" SQ Post Header, Through-hole, Vertical, -55 to 125 degC, 2.54 mm Pitch, 3-Pin, Male, RoHS"

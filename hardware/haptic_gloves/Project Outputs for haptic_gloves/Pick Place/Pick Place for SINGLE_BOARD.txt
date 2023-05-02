@@ -1,0 +1,46 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\haptic_gloves\Project Outputs for haptic_gloves\Pick Place\Pick Place for SINGLE_BOARD.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/04/23
+Time:       20:08
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment             Layer       Footprint                          Center-X(mil) Center-Y(mil) Rotation Description                                                                                      
+*          "12.5mm button"     TopLayer    12.5mm_button-Footprint-1          0.000         0.000         90       "Spacer, Round, 1/4 Inch O.D., 1/4 Inch Long, #8 Hole, Phenolic"                                 
+P2         61302011121         TopLayer    61302011121                        1118.110      5435.039      270      "THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 20 pins"                             
+P1         61302011121         TopLayer    61302011121                        2094.488      5427.953      90       "THT Vertical Pin Header WR-PHD, Pitch 2.54 mm, Single Row, 20 pins"                             
+B2         1048                TopLayer    1048                               1805.000      2688.386      270      "KEYSTONE - 1048 - BATTERY HOLDER, 18650 LI-ION, 2CELL, SMD"                                     
+C1         GRM31C5C1E104JA01L  BottomLayer CAPC3216X180X55LL20T25             2618.110      4381.890      0        "Chip Capacitor, 100 nF, +/- 5%, 25 V, -55 to 125 degC, 1206 (3216 Metric), RoHS, Tape and Reel" 
+C2         330nf               BottomLayer FP-1206-L_3_2_0_2-W_1_6_0-IPC_B    2649.606      4208.661      90       "General Purpose Ceramic Capacitor, 1206, 330nF, 10%, X7R, 15%, 50V"                             
+C3         GRM31C5C1E104JA01L  BottomLayer CAPC3216X180X55LL20T25             2649.606      4007.874      270      "Chip Capacitor, 100 nF, +/- 5%, 25 V, -55 to 125 degC, 1206 (3216 Metric), RoHS, Tape and Reel" 
+C4         GRM31CR61E106KA12L  BottomLayer CAPC3216X180X55ML20T25             2602.362      4503.937      0        "Chip Capacitor, 10 uF, +/- 10%, 25 V, -55 to 85 degC, 1206 (3216 Metric), RoHS, Tape and Reel"  
+C5         C2012X5R1E105K125AA TopLayer    FP-C2012-125-0_2-IPC_A             1917.323      8648.191      270      "Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0805"                                        
+C6         12065C472KAT2A      TopLayer    FP-1206-L_3_2_0_2-W_1_6_0-IPC_A    2173.228      8263.780      90       "General Purpose Ceramic Capacitor, 1206, 4.7nF, 10%, X7R, 15%, 50V"                             
+C7         C2012X5R1E105K125AA TopLayer    FP-C2012-125-0_2-IPC_A             2059.055      8219.058      270      "Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0805"                                        
+C8         12065C472KAT2A      TopLayer    FP-1206-L_3_2_0_2-W_1_6_0-IPC_A    2023.622      8669.291      90       "General Purpose Ceramic Capacitor, 1206, 4.7nF, 10%, X7R, 15%, 50V"                             
+C9         C2012X5R1E105K125AA TopLayer    FP-C2012-125-0_2-IPC_A             1423.782      8043.307      0        "Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0805"                                        
+C10        C2012X5R1E105K125AA TopLayer    FP-C2012-125-0_2-IPC_A             1665.354      8279.528      0        "Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0805"                                        
+C11        12065C472KAT2A      TopLayer    FP-1206-L_3_2_0_2-W_1_6_0-IPC_A    1413.417      8165.354      180      "General Purpose Ceramic Capacitor, 1206, 4.7nF, 10%, X7R, 15%, 50V"                             
+C12        12065C472KAT2A      TopLayer    FP-1206-L_3_2_0_2-W_1_6_0-IPC_A    1637.795      8393.701      180      "General Purpose Ceramic Capacitor, 1206, 4.7nF, 10%, X7R, 15%, 50V"                             
+C13        C2012X5R1E105K125AA TopLayer    FP-C2012-125-0_2-IPC_A             1814.961      7775.591      90       "Multilayer Ceramic Capacitors 1µF ±10% 25V X5R SMD 0805"                                        
+C14        12065C472KAT2A      TopLayer    FP-1206-L_3_2_0_2-W_1_6_0-IPC_A    1700.787      7724.409      270      "General Purpose Ceramic Capacitor, 1206, 4.7nF, 10%, X7R, 15%, 50V"                             
+J1         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 2637.795      7976.378      270      "Headers & Wire Housings 8CKT WTB R/A"                                                           
+J2         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 2585.775      8689.816      315      "Headers & Wire Housings 8CKT WTB R/A"                                                           
+J3         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 1944.882      8913.386      0        "Headers & Wire Housings 8CKT WTB R/A"                                                           
+J4         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 1267.437      8708.382      45       "Headers & Wire Housings 8CKT WTB R/A"                                                           
+J5         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 1224.409      7988.189      90       "Headers & Wire Housings 8CKT WTB R/A"                                                           
+J6         53254-0870          TopLayer    SHDRRA8W50P0X200_1X8_1800X730X440P 1204.724      7232.283      90       "Headers & Wire Housings 8CKT WTB R/A"                                                           
+U1         L7805CV             TopLayer    TO220                              2783.465      4065.354      270      "Positive Voltage Regulator, 5V, 3-Pin TO-220"                                                   
+U2         LD1117V33           TopLayer    TO220                              2787.402      4501.575      270      "Fixed Low Drop Positive Voltage Regulator, 3.3V, 3-Pin TO-220"                                  
+U4         ACS724LLCTR-05AB-T  TopLayer    FP-LCN-8-IPC_C                     2370.079      8228.346      180      "SENSOR CURRENT HALL"                                                                            
+U5         ACS724LLCTR-05AB-T  TopLayer    FP-LCN-8-IPC_C                     2212.598      8657.480      180      "SENSOR CURRENT HALL"                                                                            
+U6         ACS724LLCTR-05AB-T  TopLayer    FP-LCN-8-IPC_C                     1413.386      8358.268      270      "SENSOR CURRENT HALL"                                                                            
+U7         ACS724LLCTR-05AB-T  TopLayer    FP-LCN-8-IPC_C                     1678.543      8593.856      270      "SENSOR CURRENT HALL"                                                                            
+U8         ACS724LLCTR-05AB-T  TopLayer    FP-LCN-8-IPC_C                     1496.063      7759.842      0        "SENSOR CURRENT HALL"                                                                            
+U9         CD74HC4067SM96      BottomLayer FP-DB0024A-IPC_C                   1695.872      6621.063      180      "IC MUX/DEMUX 1X16 24SSOP"                                                                       
+U3         CD74HC4067SM96      BottomLayer FP-DB0024A-IPC_C                   2177.165      6744.095      90       "IC MUX/DEMUX 1X16 24SSOP"                                                                       

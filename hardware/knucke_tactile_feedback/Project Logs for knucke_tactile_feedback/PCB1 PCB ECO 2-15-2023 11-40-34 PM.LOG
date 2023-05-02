@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=GND Pin=Designator28-1
+Removed Pin From Net: NetName=GND Pin=Designator28-2
+Removed Pin From Net: NetName=NetJ1_7 Pin=Designator29-1
+Removed Pin From Net: NetName=NetJ1_7 Pin=Designator29-2
+Add Component: Footprint Not Found MOLX-52207-0460
+Add Pin To Net: Unknown Pin: Pin J2-1
+Added Net: Name=NetJ2_2
+Add Class Member: Failed to add class member : Component J2 52207-0460

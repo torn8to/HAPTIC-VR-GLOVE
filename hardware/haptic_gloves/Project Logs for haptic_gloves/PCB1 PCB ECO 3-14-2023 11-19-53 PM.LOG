@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=B1-1
+Removed Pin From Net: NetName=VCC Pin=B1-4
+Removed Member From Class: ClassName=power_esp32 Member=B1

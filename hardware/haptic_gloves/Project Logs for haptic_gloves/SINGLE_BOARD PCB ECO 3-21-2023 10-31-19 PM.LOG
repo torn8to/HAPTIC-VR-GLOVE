@@ -1,0 +1,80 @@
+Removed Pin From Net: NetName=NetP2_11 Pin=U3-10
+Removed Pin From Net: NetName=NetP2_12 Pin=U3-11
+Removed Pin From Net: NetName=NetP2_7 Pin=U9-10
+Removed Pin From Net: NetName=NetP2_8 Pin=U9-11
+Removed Pin From Net: NetName=NetP2_10 Pin=U9-13
+Removed Pin From Net: NetName=NetP2_9 Pin=U9-14
+Added Component: Designator=P1(61302011121)
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mOhm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40to105degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "61302011121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bag"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "61302011121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Number"; Value = "20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Number"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Withstanding Voltage"; Value = "500VAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Working Voltage"; Value = "250VAC"; VariantName = "[No Variations]"
+Added Component: Designator=P2(61302011121)
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mOhm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://katalog.we-online.de/em/datasheet/6130xx11121.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.we-online.de"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "THT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40to105degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "61302011121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bag"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "61302011121"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Number"; Value = "20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "WurthElektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Current"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Row Number"; Value = "Single"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Withstanding Voltage"; Value = "500VAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Working Voltage"; Value = "250VAC"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin *-2
+Add Pin To Net: Unknown Pin: Pin *-3
+Added Pin To Net: NetName=Net*_3 Pin=P1-9
+Added Pin To Net: NetName=MOTOR_0 Pin=P1-10
+Added Pin To Net: NetName=MOTOR_1 Pin=P1-11
+Added Pin To Net: NetName=MOTOR_2 Pin=P1-12
+Added Pin To Net: NetName=MOTOR_3 Pin=P1-13
+Added Pin To Net: NetName=MOTOR_4 Pin=P1-14
+Added Pin To Net: NetName=GND Pin=P1-15
+Added Pin To Net: NetName=E Pin=P1-16
+Added Pin To Net: NetName=+5 Pin=P1-20
+Added Pin To Net: NetName=MUX_OUTPUT Pin=P2-4
+Added Pin To Net: NetName=NetP2_7 Pin=P2-7
+Added Pin To Net: NetName=NetP2_8 Pin=P2-8
+Added Pin To Net: NetName=NetP2_9 Pin=P2-9
+Added Pin To Net: NetName=NetP2_10 Pin=P2-10
+Added Pin To Net: NetName=NetP2_11 Pin=P2-11
+Added Pin To Net: NetName=NetP2_12 Pin=P2-12
+Added Pin To Net: NetName=GND Pin=P2-14
+Added Pin To Net: NetName=I2C_CLK Pin=P2-15
+Added Pin To Net: NetName=I2C_SDA Pin=P2-18
+Added Pin To Net: NetName=GND Pin=P2-20
+Added Pin To Net: NetName=NetP2_9 Pin=U3-10
+Added Pin To Net: NetName=NetP2_10 Pin=U3-11
+Added Pin To Net: NetName=NetP2_12 Pin=U3-13
+Added Pin To Net: NetName=NetP2_11 Pin=U3-14
+Added Pin To Net: NetName=NetP2_8 Pin=U9-13
+Added Pin To Net: NetName=NetP2_7 Pin=U9-14
+Added Pin To Net: NetName=NetP2_5 Pin=P2-5
+Added Pin To Net: NetName=NetP2_5 Pin=U9-10
+Added Net: Name=NetP2_5
+Added Pin To Net: NetName=NetP2_6 Pin=P2-6
+Added Pin To Net: NetName=NetP2_6 Pin=U9-11
+Added Net: Name=NetP2_6
+Added Member To Class: ClassName=U_power_esp32 Member=Component P1 61302011121
+Added Member To Class: ClassName=U_power_esp32 Member=Component P2 61302011121

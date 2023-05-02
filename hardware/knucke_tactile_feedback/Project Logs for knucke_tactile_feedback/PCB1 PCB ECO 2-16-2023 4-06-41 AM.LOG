@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=NetJ1_8 Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J2-6
+Removed Pin From Net: NetName=NetJ1_4 Pin=U1-2
+Change Component Designator: OldDesignator=J1 NewDesignator=J2
+Change Component Designator: OldDesignator=J2 NewDesignator=J1
+Change Component Designator: OldDesignator=P1 NewDesignator=P2
+Change Component Designator: OldDesignator=R1 NewDesignator=R4
+Change Component Designator: OldDesignator=R2 NewDesignator=R1
+Change Component Designator: OldDesignator=R3 NewDesignator=R2
+Change Component Designator: OldDesignator=R4 NewDesignator=R5
+Change Component Designator: OldDesignator=R5 NewDesignator=R3
+Added Component: Designator=U?(FP-DBZ0003A-IPC_B)
+Added Pin To Net: NetName=NetJ2_2 Pin=J2-2
+Added Pin To Net: NetName=3.3 Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=NetU1_2 Pin=U1-2
+Added Net: Name=NetU1_2
+Added Pin To Net: NetName=NetU?_2 Pin=U?-2
+Added Net: Name=NetU?_2
+Added Member To Class: ClassName=hallbridge and connectors Member=Component J2 214721-0020
+Added Member To Class: ClassName=hallbridge and connectors Member=Component R1 TNPU1206100RBZEN00
+Added Member To Class: ClassName=hallbridge and connectors Member=Component R2 TNPU1206100RBZEN00
+Added Member To Class: ClassName=hallbridge and connectors Member=Component R5 TNPU1206100RBZEN00
+Added Member To Class: ClassName=hallbridge and connectors Member=Component U? TMAG5231B1DQDBZR

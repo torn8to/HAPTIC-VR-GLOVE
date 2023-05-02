@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=MASTER_BLOXK.SchDoc|SheetNumber=2
+Record=SheetSymbol|SourceDocument=MASTER_BLOXK.SchDoc|Designator=U_PIN HEADERS|SchDesignator=U_PIN HEADERS|FileName=PIN HEADERS.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=PIN HEADERS.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=MASTER_BLOXK.SchDoc|Designator=U_power_esp32|SchDesignator=U_power_esp32|FileName=power_esp32.SchDoc|SheetNumber=5|SymbolType=Normal|RawFileName=power_esp32.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=MASTER_BLOXK.SchDoc|Designator=U_tactile_power|SchDesignator=U_tactile_power|FileName=tactile_power.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=tactile_power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=MASTER_BLOXK.SchDoc|FileName=esp32-PLACEMENT.SchDoc|SheetNumber=1
