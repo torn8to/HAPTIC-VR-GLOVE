@@ -1,0 +1,3 @@
+[submodule "opengloves-driver-with-closed-loop-feedback"]
+	path = opengloves-driver-with-closed-loop-feedback
+	url = https://github.com/DavidD121/opengloves-driver-with-closed-loop-feedback.git
