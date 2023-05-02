@@ -379,7 +379,7 @@ void getFingerPositions(bool calibrating, bool reset){
 
   #endif
 
-  int rawFingers[10];
+  int rawFingers[15];
 
   #if USING_SPLAY
     int rawFingersSplay[5] = {NO_THUMB?0:analogPinRead(PIN_THUMB_SPLAY), 
@@ -393,13 +393,21 @@ void getFingerPositions(bool calibrating, bool reset){
     //memcpy(rawFingers, rawFingersFlexion, 5); //memcpy doesn't seem to work here
     //memcpy(&rawFingers[5], rawFingersSplay, 5); 
 
+  #if USING_STRAIN_GAUGE
+    //TODO: GET FORCE READINGS
+    int rawFingersForce[5] = {0,0,0,0,0};
+  #else
+    int rawFingersForce[5] = {0,0,0,0,0};
+  #endif
+
   for (int i = 0; i < 5; i++){
     rawFingers[i] = rawFingersFlexion[i];
     rawFingers[i+5] = rawFingersSplay[i];
+    rawFingers[i+10] = rawFingersForce[i];
   }
   
   
-  //flip pot values if needed
+  //flip values if needed
   #if FLIP_FLEXION
   for (int i = 0; i < 5; i++){
     rawFingers[i] = ANALOG_MAX - rawFingers[i];
@@ -408,6 +416,12 @@ void getFingerPositions(bool calibrating, bool reset){
   
   #if FLIP_SPLAY
   for (int i = 5; i < 10; i++){
+    rawFingers[i] = ANALOG_MAX - rawFingers[i];
+  }
+  #endif
+
+  #if FLIP_STRAIN
+  for (int i = 10; i < 15; i++){
     rawFingers[i] = ANALOG_MAX - rawFingers[i];
   }
   #endif
@@ -690,33 +704,32 @@ float read()
 }
 
  void gaugeIntitialize(){
-      readMux(PIN_STRAIN_GAGUE_THUMB);
+      readMux(PIN_STRAIN_GAUGE_THUMB);
       strainBegin();
-      readMux(PIN_STRAIN_GAGUE_INDEX);
+      readMux(PIN_STRAIN_GAUGE_INDEX);
       strainBegin();
-      readMux(PIN_STRAIN_GAGUE_MIDDLE);
+      readMux(PIN_STRAIN_GAUGE_MIDDLE);
       strainBegin();
-      readMux(PIN_STRAIN_GAGUE_RING);
+      readMux(PIN_STRAIN_GAUGE_RING);
       strainBegin();
-      readMux(PIN_STRAIN_GAGUE_PINKY);
+      readMux(PIN_STRAIN_GAUGE_PINKY);
       strainBegin();
     }
 
-  int gaugeGetUnits(){
-      uint32_t raw_readings[5];
-      readMux(PIN_STRAIN_GAGUE_THUMB);
+  int* gaugeGetUnits(){
+      int raw_readings[5];
+      readMux(PIN_STRAIN_GAUGE_THUMB);
       raw_readings[0] = read();
-      readMux(PIN_STRAIN_GAGUE_INDEX);
+      readMux(PIN_STRAIN_GAUGE_INDEX);
       raw_readings[1] = read();
-      readMux(PIN_STRAIN_GAGUE_MIDDLE);
+      readMux(PIN_STRAIN_GAUGE_MIDDLE);
       raw_readings[2] = read();
-      readMux(PIN_STRAIN_GAGUE_RING);
+      readMux(PIN_STRAIN_GAUGE_RING);
       raw_readings[3] = read();
-      readMux(PIN_STRAIN_GAGUE_PINKY);
+      readMux(PIN_STRAIN_GAUGE_PINKY);
       raw_readings[4] = read();
+      return raw_readings;
   }
-
-  
 
 
 

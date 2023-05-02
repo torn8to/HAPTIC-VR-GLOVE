@@ -18,18 +18,18 @@
   #define BTSERIAL_DEVICE_NAME "lucidgloves-left"
 
 //ANALOG INPUT CONFIG
-#define USING_SPLAY false //whether or not your glove tracks splay. - tracks the side to side "wag" of fingers. Requires 5 more inputs.
+#define USING_SPLAY true //whether or not your glove tracks splay. - tracks the side to side "wag" of fingers. Requires 5 more inputs.
 #define USING_MULTIPLEXER true //Whether or not you are using a multiplexer for inputs
+#define USING_STRAIN_GAUGE true //Whether or not you are using strain gauge to detect force applied by each finger. Requires 5 more inputs
+#define USING_CURRENT_SENSOR true //Whether or not you are using a current sensor
 #define FLIP_FLEXION  false  //Flip values from potentiometers (for fingers!) if they are backwards
 #define FLIP_SPLAY true //Flip values for splay
-#define USING_STRAIN_GAUGE true
-#define USING_CURRENT_SENSOR true
+#define FLIP_STRAIN true //Flip values for force readings
 
 //Gesture enables, make false to use button override
 #define TRIGGER_GESTURE true
 #define GRAB_GESTURE    true
 #define PINCH_GESTURE   true
-
 
 //BUTTON INVERT
 //If a button registers as pressed when not and vice versa (eg. using normally-closed switches),
@@ -86,28 +86,28 @@
   #define PIN_INDEX_MOTOR     26 //^
   #define PIN_THUMB_MOTOR     25 //^
   //#define PIN_MENU_BTN        34
-  #define PIN_CURRENT_SENSOR_PINKY MUX(16)
-  #define PIN_CURRENT_SENSOR_RING MUX(17)
+  #define PIN_CURRENT_SENSOR_PINKY  MUX(16)
+  #define PIN_CURRENT_SENSOR_RING   MUX(17)
   #define PIN_CURRENT_SENSOR_MIDDLE MUX(18)
-  #define PIN_CURRENT_SENSOR_INDEX MUX(19)
-  #define PIN_CURRENT_SENSOR_THUMB MUX(20)
+  #define PIN_CURRENT_SENSOR_INDEX  MUX(19)
+  #define PIN_CURRENT_SENSOR_THUMB  MUX(20)
 
-  #define PIN_STRAIN_GAGUE_PINKY MUX(0)
-  #define PIN_STRAIN_GAGUE_RING MUX(4)
-  #define PIN_STRAIN_GAGUE_MIDDLE MUX(8)
-  #define PIN_STRAIN_GAGUE_INDEX MUX(12)
-  #define PIN_STRAIN_GAGUE_THUMB MUX(23)
+  #define PIN_STRAIN_GAUGE_PINKY  MUX(0)
+  #define PIN_STRAIN_GAUGE_RING   MUX(4)
+  #define PIN_STRAIN_GAUGE_MIDDLE MUX(8)
+  #define PIN_STRAIN_GAUGE_INDEX  MUX(12)
+  #define PIN_STRAIN_GAUGE_THUMB  MUX(23)
   
   #define PIN_DOUT 32
 
   //Splay pins. Only used for splay tracking gloves. Use MUX(pin) if you are using a multiplexer for it.
-  /*
+  
   #define PIN_PINKY_SPLAY  MUX(14)
   #define PIN_RING_SPLAY   MUX(11)
   #define PIN_MIDDLE_SPLAY MUX(8)
   #define PIN_INDEX_SPLAY  MUX(5)
   #define PIN_THUMB_SPLAY  MUX(2)
-  */
+  
   
 
   //Select pins for multiplexers, set as needed if using a mux. You can add or remove pins as needed depending on how many select pins your mux needs.
