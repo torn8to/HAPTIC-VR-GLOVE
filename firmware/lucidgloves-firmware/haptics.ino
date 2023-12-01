@@ -5,7 +5,7 @@
 #else
   #include "Servo.h"
 #endif
-
+float integral = 0.0;
 Servo pinkyServo;
 Servo ringServo;
 Servo middleServo;
@@ -45,12 +45,21 @@ void dynScaleLimits(int* hapticLimits, float* scaledLimits){
     scaledLimits[i] = hapticLimits[i] / 1000.0f * 180.0f;
   }
 }
-/*
-int* getControlError(int strainGauge,target_output){
 
-
+void PIDhaptics(int* currentservo_output, int* goalServoLocation, float* currentServoForce, float* currentStrainForce, float* goalForceFingers,float* errorIntegral )
+{
+  //Make sure current servoForce and as well as strain data  is calculated to capture tensile strength of the material the methods that map the values to closer to real
+  // also make sure the integral is reset about every half second of main loop or else finger damage is possible.
+  float kp = .0753;
+  float ki = .0047;
+  float p = 0;  
+  for(int i  = 0; i < sizeof(current_servo_output); i++){
+    float p = goalForceFingers[i] - currentServoFingers[i] - currentStrainForce[i];
+    integral[i] += p;
+    kp * (p) + ki * integral
+  }
 }
-*/
+
 void writeServoHaptics(int* hapticLimits){
   
   float scaledLimits[5];
