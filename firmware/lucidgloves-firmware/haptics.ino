@@ -46,7 +46,7 @@ void dynScaleLimits(int* hapticLimits, float* scaledLimits){
   }
 }
 
-void PIDhaptics(int* currentservo_output, int* goalServoLocation, float* currentServoForce, float* currentStrainForce, float* goalForceFingers,float* errorIntegral )
+void PIDhaptics(int* currentServoLocation, int* goalServoLocation, float* currentServoForce, float* currentStrainForce, float* goalForceFingers,float* errorIntegral )
 {
   //Make sure current servoForce and as well as strain data  is calculated to capture tensile strength of the material the methods that map the values to closer to real
   // also make sure the integral is reset about every half second of main loop or else finger damage is possible.
@@ -56,7 +56,14 @@ void PIDhaptics(int* currentservo_output, int* goalServoLocation, float* current
   for(int i  = 0; i < sizeof(current_servo_output); i++){
     float p = goalForceFingers[i] - currentServoFingers[i] - currentStrainForce[i];
     integral[i] += p;
-    kp * (p) + ki * integral
+    float pi = kp * (p) + ki * integral
+    if(abs(currentServoLocation[i] - goalServoLocation[i]) >10)
+    {
+      currentServoLocation[i] =+ (int) pi
+    }
+    else{
+      
+    }
   }
 }
 
